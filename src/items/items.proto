@@ -10,13 +10,13 @@ service ItemsService {
 
 message CreateItemRequest {
     string name = 1;
-    int32 quantuty = 2;
+    int32 quantity = 2;
 }
 
 message Item {
     string id = 1;
     string name = 2;
-    int32 quantuty = 3;
+    int32 quantity = 3;
 }
 
 message GetItemRequest {

@@ -2,10 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { CreateItemRequest, GetItemRequest, Item, Items } from './items';
 import { randomUUID } from 'crypto';
 import { Observable, Subject } from 'rxjs';
+import { mockItems } from 'src/__mock__/items.mock';
 
 @Injectable()
 export class ItemsService {
-  private readonly items: Item[] = [];
+  private readonly items = mockItems;
   private readonly itemsSubject = new Subject<Items>();
 
   createItem(request: CreateItemRequest): Item {
